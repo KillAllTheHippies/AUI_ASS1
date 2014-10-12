@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.applet.*;
+import java.net.URL;
 
 
 public class UI extends Applet {
@@ -15,16 +16,31 @@ public class UI extends Applet {
     Controller controller;
 	Panel panel;
     ShapeCanvas canvas; //ShapeCanvas Extends Canvas
-	
-	public void paint(Graphics g)
+    Image background;
+    URL base;
+    MediaTracker tracker;
+
+    public void paint(Graphics g)
 	{
-		
-	}	
+        g.drawImage(background, 0, 0, this);
+	}
 
 	public void init() {
 
+        base = getDocumentBase();
+        background = getImage(base, "background.gif");
+
+        tracker = new MediaTracker(this);
+        tracker.addImage(background, 1);
+
+        try {
+            tracker.waitForAll();
+        }
+        catch (InterruptedException  e) {}
+
         controller = new Controller(this);
         panel = new Panel();
+
         numberSeq = new Label();
         info = new Label();
 
@@ -37,7 +53,7 @@ public class UI extends Applet {
         input = new TextField(10);
         add(panel);// put panel on applet
         panel.setLayout(new BoxLayout(panel,BoxLayout.PAGE_AXIS));
-        this.setBackground(Color.black);
+        //this.setBackground(Color.black);
         
         Font f = new Font("Serif",Font.BOLD,50);
         numberSeq.setForeground(Color.yellow);
@@ -48,6 +64,7 @@ public class UI extends Applet {
         panel.add(input); // put input on applet
         panel.add(beginButton);
         panel.add(checkButton);
+
 
         panel.add(info);
         info.setAlignment(Label.CENTER);
