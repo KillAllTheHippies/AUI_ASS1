@@ -13,16 +13,20 @@ public class Controller {
     final int maxRounds = 4;
     private int score = 1;
 
+
     //Constructor
     public Controller(UI ui)
     {
         this.ui =ui;
+        hideTime=300;
+        showTime=500;
     }
 
     public void win()
     {
         ui.animate("you won ", Color.ORANGE);
         ui.animate("Score: "+score++, Color.GREEN);
+        increaseDifficulty();
         reset();
     }
     public void lose()
@@ -49,7 +53,15 @@ public class Controller {
             ui.animate("Correct", Color.GREEN);
             ui.animate("Score: "+score++, Color.GREEN);
             showSequence();
+            increaseDifficulty();
         }
+    }
+    public void increaseDifficulty()
+    {
+        if (hideTime>100)
+    	    hideTime -= 10;
+        if (showTime>100)
+            showTime -= 25;
     }
     public void displayDigit(int index) {
         a = answer.charAt(index);
@@ -74,8 +86,7 @@ public class Controller {
 //    	if(ui!=null)
 //    		ui.clearPie();
     	
-        hideTime=100;
-        showTime=500;
+
         randomNum = Math.random();
         number = String.valueOf(randomNum);
         System.out.println(number);
