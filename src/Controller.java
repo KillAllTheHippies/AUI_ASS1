@@ -62,6 +62,7 @@ public class Controller {
 
     public void reset()
     {
+    	//ui.clearInput();
         hideTime=100;
         showTime=500;
         randomNum = Math.random();
@@ -69,6 +70,7 @@ public class Controller {
         System.out.println(number);
         roundNo = 3;
         answer=number.substring(2,5);
+        
     }
     public void showSequence()
     {
@@ -82,6 +84,7 @@ public class Controller {
     public void checkAnswer()
     {
         String userInput = ui.getUserInput();
+        ui.clearInput();
         if (userInput.equals(answer))
         {
             nextRound();

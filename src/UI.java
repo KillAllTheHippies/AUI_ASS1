@@ -2,12 +2,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.applet.*;
 
+
 public class UI extends Applet {
 
-	Label numberSeq;
+	Label numberSeq, info;
 	TextField input;
-	Button b = new Button("Begin");
-	Button c = new Button("Check answer");
+	Button beginButton = new Button("Begin");
+	Button checkButton = new Button("Check answer");
     Controller controller;
 	
 	
@@ -23,21 +24,26 @@ public class UI extends Applet {
 
         controller = new Controller(this);
         numberSeq = new Label();
+        info = new Label();
 
         input = new TextField(10);
 
         add(numberSeq); // put prompt on applet
         add(input); // put input on applet
-        add(b);
-        add(c);
+        add(beginButton);
+        add(checkButton);
+        add(info);
 
-        ActionListener beginListener = new BeginListener(b, controller);
+        ActionListener beginListener = new BeginListener(input, beginButton, controller);
         ActionListener chkListener = new CheckListener(controller);
-        b.addActionListener(beginListener);
-        c.addActionListener(chkListener);
-       // input.addActionListener(beginListener);
+        ActionListener inputListener = new InputListener(controller);
+        beginButton.addActionListener(beginListener);
+        checkButton.addActionListener(chkListener);
+        input.addActionListener(inputListener);
 
+        
         start();
+
 
     } // Close init
     public void showNo(char a)
@@ -61,6 +67,9 @@ public class UI extends Applet {
     public void clearInput()
     {
         input.setText("");
+        input.repaint();
+        input.requestFocus();
+        
     }
 	
 } // Close UI
