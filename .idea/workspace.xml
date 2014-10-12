@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cad14ae-4078-4b75-bb34-719f3c9b47e8" name="Default" comment="textfield not clearing">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InputListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BeginListener.java" afterPath="$PROJECT_DIR$/src/BeginListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller.java" afterPath="$PROJECT_DIR$/src/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UI.java" afterPath="$PROJECT_DIR$/src/UI.java" />
+    <list default="true" id="8cad14ae-4078-4b75-bb34-719f3c9b47e8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AUI_ASS1.iws" />
@@ -361,7 +357,11 @@
       <created>1413074390221</created>
       <updated>1413074390221</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="textfield not clearing">
+      <created>1413079193702</created>
+      <updated>1413079193702</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
