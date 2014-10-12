@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.applet.*;
@@ -10,7 +11,7 @@ public class UI extends Applet {
 	Button beginButton = new Button("Begin");
 	Button checkButton = new Button("Check answer");
     Controller controller;
-	
+	Panel panel;
 	
 	public void paint(Graphics g)
 	{
@@ -23,16 +24,20 @@ public class UI extends Applet {
 	public void init() {
 
         controller = new Controller(this);
+        panel = new Panel();
         numberSeq = new Label();
         info = new Label();
 
         input = new TextField(10);
+        add(panel);// put panel on applet
+        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 
-        add(numberSeq); // put prompt on applet
-        add(input); // put input on applet
-        add(beginButton);
-        add(checkButton);
-        add(info);
+        panel.add(numberSeq); // put prompt on applet
+        panel.add(input); // put input on applet
+        panel.add(beginButton);
+        panel.add(checkButton);
+        panel.add(info);
+        info.setText("TEST");
 
         ActionListener beginListener = new BeginListener(input, beginButton, controller);
         ActionListener chkListener = new CheckListener(controller);

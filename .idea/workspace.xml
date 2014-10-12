@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cad14ae-4078-4b75-bb34-719f3c9b47e8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UI.java" afterPath="$PROJECT_DIR$/src/UI.java" />
     </list>
     <ignored path="AUI_ASS1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,17 +25,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UI.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UI.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1377">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.23076923" vertical-offset="357" max-vertical-offset="1462">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1335#1336#0" expanded="true" />
-                <element signature="e#1373#1374#0" expanded="true" />
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1568#1569#0" expanded="true" />
+                <element signature="e#1606#1607#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeginListener.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BeginListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BeginListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3325792" vertical-offset="23" max-vertical-offset="697">
+            <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="697">
               <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -112,8 +112,8 @@
         <option value="$PROJECT_DIR$/src/inputListener.java" />
         <option value="$PROJECT_DIR$/src/InputListener.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
-        <option value="$PROJECT_DIR$/src/UI.java" />
         <option value="$PROJECT_DIR$/src/BeginListener.java" />
+        <option value="$PROJECT_DIR$/src/UI.java" />
       </list>
     </option>
   </component>
@@ -457,20 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1377">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/InputListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
@@ -500,10 +486,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BeginListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325792" vertical-offset="23" max-vertical-offset="697">
+        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="697">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23076923" vertical-offset="357" max-vertical-offset="1462">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
           </folding>
         </state>
       </provider>
