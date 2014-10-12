@@ -10,7 +10,8 @@ public class Controller {
     public int roundNo = 3;
     private double randomNum;
     private int hideTime, showTime;
-    final int maxRounds = 6;
+    final int maxRounds = 4;
+    private int score = 1;
 
     //Constructor
     public Controller(UI ui)
@@ -21,11 +22,13 @@ public class Controller {
     public void win()
     {
         ui.animate("you won ", Color.ORANGE);
+        ui.animate("Score: "+score++, Color.GREEN);
         reset();
     }
     public void lose()
     {
         ui.animate("you lost ", Color.RED);
+        ui.animate("Score: "+score, Color.RED);
         reset();
     }
     public void nextRound()
@@ -44,6 +47,7 @@ public class Controller {
             answer=number.substring(2,roundNo+2);
             ui.clearInput();
             ui.animate("Correct", Color.GREEN);
+            ui.animate("Score: "+score++, Color.GREEN);
             showSequence();
         }
     }
@@ -95,6 +99,7 @@ public class Controller {
         if (userInput.equals(answer))
         {
             nextRound();
+
         }
         else
         {
