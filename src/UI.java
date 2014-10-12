@@ -58,6 +58,9 @@ public class UI extends Applet {
     {
         return input.getText();
     }
-
+    public void clearInput()
+    {
+        input.setText("");
+    }
 	
 } // Close UI

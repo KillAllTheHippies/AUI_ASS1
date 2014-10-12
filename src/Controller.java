@@ -1,6 +1,4 @@
-/**
- * Created by Jamie on 11/10/14.
- */
+
 public class Controller {
 
 
@@ -40,28 +38,32 @@ public class Controller {
         {
             roundNo++;
             answer=number.substring(2,roundNo+2);
+            ui.clearInput();
             showSequence();
         }
     }
     public void displayDigit(int index) {
         a = answer.charAt(index);
-        sleep(showTime);
-        ui.showNo(a);
         sleep(hideTime);
+        ui.showNo(a);
+        sleep(showTime);
         ui.hideNo();
     }
 
     public void sleep(int millis) {
         try {
             Thread.sleep(millis);
-        } catch (InterruptedException e1) {}
+        } catch (InterruptedException e1)
+        {
+            e1.printStackTrace();
+        }
     }
 
 
     public void reset()
     {
-        hideTime=500;
-        showTime=1000;
+        hideTime=100;
+        showTime=500;
         randomNum = Math.random();
         number = String.valueOf(randomNum);
         System.out.println(number);
