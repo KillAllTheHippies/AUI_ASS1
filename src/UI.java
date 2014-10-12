@@ -12,21 +12,23 @@ public class UI extends Applet {
 	Button checkButton = new Button("Check answer");
     Controller controller;
 	Panel panel;
+    Canvas canvas; //ShapeCanvas Extends Canvas
 	
-	public void paint(Graphics g)
-	{
-		
-		
-	} // Close paint
+	public void paint(Graphics g){
+	}	
 
-
-	
 	public void init() {
 
         controller = new Controller(this);
         panel = new Panel();
         numberSeq = new Label();
         info = new Label();
+
+        canvas=new ShapeCanvas();
+
+        canvas.setBounds(0,0,100,100);
+        canvas.setBackground(Color.GRAY);
+        
 
         input = new TextField(10);
         add(panel);// put panel on applet
@@ -40,7 +42,8 @@ public class UI extends Applet {
         panel.add(beginButton);
         panel.add(checkButton);
         panel.add(info);
-        info.setText("TEST");
+        panel.add(canvas);
+        info.setText("Ready");
 
         ActionListener beginListener = new BeginListener(input, beginButton, controller);
         ActionListener chkListener = new CheckListener(controller);
@@ -49,7 +52,6 @@ public class UI extends Applet {
         checkButton.addActionListener(chkListener);
         input.addActionListener(inputListener);
 
-        
         start();
 
 
@@ -75,7 +77,6 @@ public class UI extends Applet {
     public void clearInput()
     {
         input.setText("");
-        input.repaint();
         input.requestFocus();
     }
     public void animate(String text, Color color)
@@ -98,5 +99,6 @@ public class UI extends Applet {
         }
         info.setText("");
     }
+    
 	
 } // Close UI
