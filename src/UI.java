@@ -22,21 +22,22 @@ public class UI extends Applet {
 
     public void paint(Graphics g)
 	{
+
+        //panel.setSize(getWidth()/2 , getHeight()/2);
+
         g.drawImage(background, 0, 0, this);
+
 	}
 
 	public void init() {
 
+        this.setSize(600,600);
         base = getDocumentBase();
         background = getImage(base, "background.gif");
 
         tracker = new MediaTracker(this);
         tracker.addImage(background, 1);
 
-        try {
-            tracker.waitForAll();
-        }
-        catch (InterruptedException  e) {}
 
         controller = new Controller(this);
         panel = new Panel();
