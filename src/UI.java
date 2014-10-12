@@ -147,6 +147,11 @@ public class UI extends Applet {
     	canvas.drawPieChart();
     	canvas.paint(canvas.getGraphics());
     }
-    
+
+    public void clearPie()
+    {
+        canvas.clearPieChart();
+        canvas.paint(canvas.getGraphics());
+    }
 	
 } // Close UI

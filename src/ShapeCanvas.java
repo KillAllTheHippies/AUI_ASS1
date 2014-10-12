@@ -42,11 +42,11 @@ public class ShapeCanvas extends Canvas{
 		
 		
 	}
-//	public void clearPieChart()
-//	{
-//		if (g == null) return;
-//		g.setColor(Color.BLACK);
-//		g.fillOval(50, 50, 50, 50); // draw pie chart circle
-//	}
+	public void clearPieChart()
+	{
+		if (g == null) return;
+		g.setColor(Color.BLACK);
+		g.fillOval(50, 50, 50, 50); // draw pie chart circle
+	}
 }
 

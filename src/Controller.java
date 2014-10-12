@@ -92,6 +92,7 @@ public class Controller {
         System.out.println(number);
         roundNo = 3;
         answer=number.substring(2,5);
+        ui.clearPie();
         
     }
     public void showSequence()
