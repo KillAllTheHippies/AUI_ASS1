@@ -1,3 +1,5 @@
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -15,6 +17,10 @@ public class UI extends Applet {
     Canvas canvas; //ShapeCanvas Extends Canvas
 	
 	public void paint(Graphics g){
+        if(panel != null){
+//        	panel.setBounds(0, 0, WIDTH, HEIGHT);
+//        	panel.repaint();
+        }
 	}	
 
 	public void init() {
@@ -32,16 +38,22 @@ public class UI extends Applet {
 
         input = new TextField(10);
         add(panel);// put panel on applet
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+        panel.setLayout(new GridLayout(0,1));
         this.setBackground(Color.black);
-        Font f = new Font("Serif",Font.BOLD,20);
+        
+        Font f = new Font("Serif",Font.BOLD,50);
         numberSeq.setForeground(Color.yellow);
         numberSeq.setFont(f);
+        //numberSeq.setAlignment(CENTER_ALIGNMENT);
+        
         panel.add(numberSeq); // put prompt on applet
         panel.add(input); // put input on applet
         panel.add(beginButton);
         panel.add(checkButton);
+
         panel.add(info);
+        info.setAlignment(Label.CENTER);
+
         panel.add(canvas);
         info.setText("Ready");
 
