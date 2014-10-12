@@ -14,13 +14,11 @@ public class UI extends Applet {
 	Button checkButton = new Button("Check answer");
     Controller controller;
 	Panel panel;
-    Canvas canvas; //ShapeCanvas Extends Canvas
+    ShapeCanvas canvas; //ShapeCanvas Extends Canvas
 	
-	public void paint(Graphics g){
-        if(panel != null){
-//        	panel.setBounds(0, 0, WIDTH, HEIGHT);
-//        	panel.repaint();
-        }
+	public void paint(Graphics g)
+	{
+		
 	}	
 
 	public void init() {
@@ -30,7 +28,7 @@ public class UI extends Applet {
         numberSeq = new Label();
         info = new Label();
 
-        canvas=new ShapeCanvas();
+        canvas=new ShapeCanvas(controller);
 
         canvas.setBounds(0,0,100,100);
         canvas.setBackground(Color.GRAY);
@@ -125,6 +123,11 @@ public class UI extends Applet {
 	
     	}
     	
+    public void drawPie()
+    {
+    	canvas.drawPieChart();
+    	canvas.paint(canvas.getGraphics());
+    }
     
 	
 } // Close UI

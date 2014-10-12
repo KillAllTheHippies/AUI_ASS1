@@ -7,10 +7,10 @@ public class Controller {
     private String answer = "";
     private UI ui;
     private char a;
-    private int roundNo = 3;
+    public int roundNo = 3;
     private double randomNum;
     private int hideTime, showTime;
-    final int maxRounds = 10;
+    final int maxRounds = 6;
 
     //Constructor
     public Controller(UI ui)
@@ -30,14 +30,17 @@ public class Controller {
     }
     public void nextRound()
     {
-        if (roundNo >= maxRounds)
+        if (roundNo++ >= maxRounds)
 
         {
+        	
+        	ui.drawPie(); 
             win();
         }
         else
         {
-            roundNo++;
+        	
+            ui.drawPie(); 
             answer=number.substring(2,roundNo+2);
             ui.clearInput();
             ui.animate("Correct", Color.GREEN);
@@ -64,7 +67,9 @@ public class Controller {
 
     public void reset()
     {
-    	//ui.clearInput();
+//    	if(ui!=null)
+//    		ui.clearPie();
+    	
         hideTime=100;
         showTime=500;
         randomNum = Math.random();
