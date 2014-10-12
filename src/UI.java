@@ -74,7 +74,26 @@ public class UI extends Applet {
         input.setText("");
         input.repaint();
         input.requestFocus();
-        
+    }
+    public void animate(String text)
+    {
+
+        Font f = new Font("Serif",Font.BOLD,12);
+        info.setForeground(Color.GREEN);
+        info.setFont(f);
+        info.setText(text);
+
+        for(int i = 12; i<20; i+=1)
+        {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            f = new Font("Serif",Font.BOLD, i );
+            info.setFont(f);
+        }
+        info.setText("");
     }
 	
 } // Close UI

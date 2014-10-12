@@ -39,6 +39,7 @@ public class Controller {
             roundNo++;
             answer=number.substring(2,roundNo+2);
             ui.clearInput();
+            ui.animate("Correct");
             showSequence();
         }
     }
