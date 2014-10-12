@@ -93,24 +93,38 @@ public class UI extends Applet {
     }
     public void animate(String text, Color color)
     {
-
+    	Graphics g = info.getGraphics();
         Font f = new Font("Serif",Font.BOLD,12);
+        FontMetrics metrics = g.getFontMetrics(f);
+    	
         info.setForeground(color);
         info.setFont(f);
         info.setText(text);
 
-        for(int i = 12; i<20; i+=1)
+        int size = 12; // give the while loop a counter
+        while(metrics.getHeight() < info.getHeight() && getStringWidth(text, f, g) < info.getWidth())
         {
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            f = new Font("Serif",Font.BOLD, i );
+            f = new Font("Serif",Font.BOLD, size++ ); // increment size
+            metrics = g.getFontMetrics(f);
+            
             info.setFont(f);
         }
         info.setText("");
     }
+    	
+    public int getStringWidth(String s, Font f, Graphics g)
+    {
+    	FontMetrics metrics;
+    	metrics = g.getFontMetrics(f);
+    	return metrics.stringWidth(s);
+	
+    	}
+    	
     
 	
 } // Close UI
