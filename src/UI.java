@@ -36,7 +36,7 @@ public class UI extends Applet {
 
         input = new TextField(10);
         add(panel);// put panel on applet
-        panel.setLayout(new GridLayout(0,1));
+        panel.setLayout(new BoxLayout(panel,BoxLayout.PAGE_AXIS));
         this.setBackground(Color.black);
         
         Font f = new Font("Serif",Font.BOLD,50);
