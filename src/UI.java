@@ -57,6 +57,8 @@ public class UI extends Applet {
         
         Font f = new Font("Serif",Font.BOLD,50);
         numberSeq.setForeground(Color.yellow);
+        numberSeq.setBackground(Color.black);
+        numberSeq.setAlignment(Label.CENTER);
         numberSeq.setFont(f);
         //numberSeq.setAlignment(CENTER_ALIGNMENT);
         
