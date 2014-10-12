@@ -31,7 +31,10 @@ public class UI extends Applet {
         input = new TextField(10);
         add(panel);// put panel on applet
         panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-
+        this.setBackground(Color.black);
+        Font f = new Font("Serif",Font.BOLD,20);
+        numberSeq.setForeground(Color.yellow);
+        numberSeq.setFont(f);
         panel.add(numberSeq); // put prompt on applet
         panel.add(input); // put input on applet
         panel.add(beginButton);
@@ -75,11 +78,11 @@ public class UI extends Applet {
         input.repaint();
         input.requestFocus();
     }
-    public void animate(String text)
+    public void animate(String text, Color color)
     {
 
         Font f = new Font("Serif",Font.BOLD,12);
-        info.setForeground(Color.GREEN);
+        info.setForeground(color);
         info.setFont(f);
         info.setText(text);
 

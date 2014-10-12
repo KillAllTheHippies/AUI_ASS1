@@ -1,3 +1,4 @@
+import java.awt.*;
 
 public class Controller {
 
@@ -19,12 +20,12 @@ public class Controller {
 
     public void win()
     {
-        System.out.println("you won ");
+        ui.animate("you won ", Color.ORANGE);
         reset();
     }
     public void lose()
     {
-        System.out.println("you lost ");
+        ui.animate("you lost ", Color.RED);
         reset();
     }
     public void nextRound()
@@ -39,7 +40,7 @@ public class Controller {
             roundNo++;
             answer=number.substring(2,roundNo+2);
             ui.clearInput();
-            ui.animate("Correct");
+            ui.animate("Correct", Color.GREEN);
             showSequence();
         }
     }
